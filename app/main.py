@@ -16,6 +16,7 @@ from .models import (
     ModelInfoResponse
 )
 from .predictor import FinancialStressPredictor
+from .download_model import download_model
 from . import __version__
 
 # Configure logging
@@ -38,6 +39,11 @@ async def lifespan(app: FastAPI):
     global predictor
     logger.info("Starting up application...")
     try:
+        # Download model if not present
+        logger.info("Checking for model artifacts...")
+        download_model()
+
+        # Load predictor
         predictor = FinancialStressPredictor()
         logger.info("Model loaded successfully")
     except Exception as e:
