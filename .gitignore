@@ -34,7 +34,6 @@ data/processed/*.csv
 *.csv
 
 # Model artifacts (too large for git)
-models/*.joblib
 models/*.pkl
 models/*.h5
 
