@@ -151,7 +151,3 @@ docker run -p 8000:8000 financial-stress-api
 - **Parameters**: n_estimators=270, max_depth=35
 - **Features**: 19 financial and behavioral characteristics
 - **Classes**: Low, Moderate, High stress
-
-## License
-
-Project created for educational purposes.
