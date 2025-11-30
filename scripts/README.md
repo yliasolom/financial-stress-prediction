@@ -1,38 +1,38 @@
 # Scripts Directory
 
-Вспомогательные скрипты для работы с проектом.
+Utility scripts for working with the project.
 
-## Доступные скрипты
+## Available Scripts
 
 ### train_model.py
-Обучение модели и сохранение артефактов.
+Model training and artifact saving.
 
 ```bash
 cd scripts
 python3 train_model.py
 ```
 
-Скрипт:
-1. Загружает данные из `../data/raw/train.csv`
-2. Выполняет препроцессинг
-3. Обучает RandomForestClassifier
-4. Сохраняет модель в `../models/model_artifacts.joblib`
+The script:
+1. Loads data from `../data/raw/train.csv`
+2. Performs preprocessing
+3. Trains RandomForestClassifier
+4. Saves model to `../models/model_artifacts.joblib`
 
 ### test_api.py
-Тестирование API эндпоинтов.
+API endpoint testing.
 
 ```bash
-# Сначала запустите API сервер
+# First, start the API server
 cd ..
 uvicorn app.main:app --port 8080
 
-# В другом терминале запустите тесты
+# In another terminal, run tests
 cd scripts
 python3 test_api.py
 ```
 
-Скрипт тестирует:
-- `/health` - проверка здоровья
-- `/` - информация о модели
-- `/predict` - одиночное предсказание
-- `/predict_batch` - пакетные предсказания
+The script tests:
+- `/health` - health check
+- `/` - model information
+- `/predict` - single prediction
+- `/predict_batch` - batch predictions

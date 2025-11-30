@@ -1,17 +1,17 @@
 # Data Directory
 
-Эта директория содержит все данные проекта.
+This directory contains all project data.
 
-## Структура
+## Structure
 
-- `raw/` - исходные необработанные данные
-  - `train.csv` - тренировочные данные
-  - `test.csv` - тестовые данные для предсказаний
-  - `sample_submission.csv` - пример формата сабмита
-  - `submission_*.csv` - результаты предсказаний
+- `raw/` - original unprocessed data
+  - `train.csv` - training data
+  - `test.csv` - test data for predictions
+  - `sample_submission.csv` - submission format example
+  - `submission_*.csv` - prediction results
 
-- `processed/` - обработанные данные (если требуется)
+- `processed/` - processed data (if needed)
 
-## Примечание
+## Note
 
-Файлы данных не добавляются в git из-за их размера (см. `.gitignore`).
+Data files are not added to git due to their size (see `.gitignore`).
